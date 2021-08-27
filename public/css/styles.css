@@ -1,11 +1,12 @@
 body {
   font-size: 120%;
-  font-family: Arial;
+  font-family: Poppins;
 }
 
 button, input {
   font-size: 100%;
-  font-family: Arial;
+  font-family: Poppins;
+  width: 100%;
 }
 
 table {
@@ -34,12 +35,12 @@ tr:nth-child(even) {
 
 .total {
   font-size: 150%;
-  text-decoration: underline;
+  font-weight: 600;
 }
 
 .form {
   margin-top: 25px;
-  width: 100%;
+  width: 90%;
 }
 
 .transactions {
@@ -48,4 +49,30 @@ tr:nth-child(even) {
   overflow: auto;
   width: 90%;
   margin: 0 auto;
+}
+
+.mx-width-90 {
+  max-width: 90%;
+}
+
+.buttons-container {
+  width: 100%;
+}
+
+@media only screen and (min-width: 840px) {
+  input {
+    max-width: 200px !important;
+  }
+
+  button {
+    width: fit-content;
+  }
+
+  .buttons-container {
+    width: fit-content;
+  }
+
+  .form {
+    flex-wrap: nowrap !important;
+  }
 }

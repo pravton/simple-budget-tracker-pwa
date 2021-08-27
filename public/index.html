@@ -8,22 +8,28 @@
   <link rel="shortcut icon" href="icons/icon-192x192.png" type="image/x-icon">
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="manifest" href="./manifest.json">
 
   <title>Budget Tracker</title>
 </head>
 <body>
-  <div class="wrapper">
-    <div class="total">
+  <div class="wrapper card my-3 px-3 py-5 mx-auto">
+    <div class="total m-3">
       <div class="total">Your total is: $<span id="total">0</span></div>
     </div>
 
-    <div class="form">
-      <input type="text" id="t-name" placeholder="Name of transaction" />
-      <input type="number" min="0" id="t-amount" placeholder="Transaction amount" />
-      <button id="add-btn"><i class="fa fa-plus buttons"></i> Add Funds</button>
-      <button id="sub-btn"><i class="fa fa-minus"></i> Subtract Funds</button>
+    <div class="form is-flex mx-auto my-3 is-flex-wrap-wrap">
+      <input class="input is-info m-1" type="text" id="t-name" placeholder="Name of transaction" />
+      <input class="input is-info m-1" type="number" min="0" id="t-amount" placeholder="Transaction amount" />
+      <div class="buttons-container is-flex mx-auto">
+        <button class="button is-success m-1" id="add-btn"><i class="fa fa-plus"></i> &nbspAdd Funds</button>
+      <button class="button is-danger m-1" id="sub-btn"><i class="fa fa-minus"></i> &nbspSubtract Funds</button>
+      </div>
       <p class="error"></p>
     </div>
 

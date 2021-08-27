@@ -3,14 +3,12 @@ let db;
 const request = indexedDB.open('budget-tracker', 1);
 // event will fire when database changes
 request.onupgradeneeded = function(e) {
-  console.log('onupgradeneeded fired :' , e);
   db = e.target.result;
   db.createObjectStore('new_transaction', { autoIncrement: true });
 }
 
 // onsuccess upload the transaction
 request.onsuccess = function(e) {
-  console.log('onsuccess fired :' , e);
   db = e.target.result;
   if(navigator.onLine) {
     uploadTransaction();
@@ -19,13 +17,11 @@ request.onsuccess = function(e) {
 
 // handling error
 request.onerror = function(e) {
-  console.log('onerror fired :' , e);
   console.log(e.target.errorCode);
 }
 
 // handling the submit when no internet connection
 const saveRecord = (record) => {
-  console.log('db test: ', db);
   // opening a transaction with databse
   const transaction = db.transaction(['new_transaction'], 'readwrite');
   // access the objectStore
@@ -59,7 +55,6 @@ const uploadTransaction = () => {
         if(transactionData.message) {
           throw new Error(transactionData);
         }
-        // opening a new transaction
         // opening a transaction with databse
         const transaction = db.transaction(['new_transaction'], 'readwrite');
         // access the objectStore

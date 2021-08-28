@@ -37,7 +37,7 @@ npm start
 
 ## ▶️ Final Output GIF 
 
-![Final Output](./public/assets/images/final-output.gif "Final output of the project") 
+![Final Output](./public/images/final-output.PNG) "Final output of the project") 
 
 ## 📝 License 
 

@@ -36,6 +36,7 @@ tr:nth-child(even) {
 .total {
   font-size: 150%;
   font-weight: 600;
+  margin-bottom: 20px;
 }
 
 .form {
@@ -55,8 +56,13 @@ tr:nth-child(even) {
   max-width: 90%;
 }
 
+.width-fc {
+  max-width: fit-content;
+}
+
 .buttons-container {
   width: 100%;
+  flex-wrap: wrap;
 }
 
 @media only screen and (min-width: 840px) {
@@ -70,6 +76,7 @@ tr:nth-child(even) {
 
   .buttons-container {
     width: fit-content;
+    flex-wrap: nowrap;
   }
 
   .form {

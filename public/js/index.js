@@ -81,15 +81,15 @@ function populateChart() {
 function sendTransaction(isAdding) {
   let nameEl = document.querySelector("#t-name");
   let amountEl = document.querySelector("#t-amount");
-  let errorEl = document.querySelector(".form .error");
+  let errorEl = document.querySelector(".error-container");
 
   // validate form
   if (nameEl.value === "" || amountEl.value === "") {
-    errorEl.textContent = "Missing Information";
+    errorEl.innerHTML = ` <p class="error notification is-danger width-fc mx-auto py-3 px-5">Missing information. Please enter valid input!</p>`;
     return;
   }
   else {
-    errorEl.textContent = "";
+    errorEl.innerHTML = "";
   }
 
   // create record
@@ -126,7 +126,7 @@ function sendTransaction(isAdding) {
   })
   .then(data => {
     if (data.errors) {
-      errorEl.textContent = "Missing Information";
+      errorEl.innerHTML = ` <p class="error notification is-danger width-fc mx-auto py-3 px-5">Missing information. Please enter valid input!</p>`;
     }
     else {
       // clear form

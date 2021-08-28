@@ -31,7 +31,7 @@ You need to setup the mongoDB first, then start the server using following comma
 npm start 
 ``` 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3001) to view it in the browser.
+Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
 
 ## 🌐 Deployed Application Link 
 
